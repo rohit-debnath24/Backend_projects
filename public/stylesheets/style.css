@@ -12,3 +12,17 @@ input{
     margin: 10px 10px;
  
 }
+#box{
+    padding:10px 10px;
+}
+#container{
+    display: flex;
+   padding: 50px;
+    align-items: center;
+}
+#nav-read{
+    margin-left: 80vw;
+    text-decoration: none;
+    color: yellowgreen;
+   
+}

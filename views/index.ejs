@@ -9,13 +9,19 @@
 <body>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <div class="w-full h-full bg-zinc-900 p-10 text-white">
-            <h1 class="text-3xl">Create User</h1>
-           
-        <form action="">
+        <div class="flex">
 
-            <input class="p-5 m-5 border-2 rounded-xl border-zinc-300 bg-transparent"type="text" placeholder="name">
-            <input class="px-5 py-2 border-2 rounded-xl border-zinc-300 bg-transparent"type="text" placeholder="name">
-            <input class="px-5 py-2 border-2 rounded-xl border-zinc-300 bg-transparent"type="text" placeholder="name">
+            <h1 class="text-3xl">Create User</h1>
+            <div class="nav ">
+                <a href="/read" id="nav-read"class="text-zinc-500 text-2xl">Read Users</a>
+            </div>
+        </div>
+          
+        <form action="/create" method="post">
+
+            <input class="p-5 m-5 border-2 rounded-xl border-zinc-300 bg-transparent"type="text" name="name"  placeholder="name">
+            <input class="px-5 py-2 border-2 rounded-xl border-zinc-300 bg-transparent"type="text" name="email"   placeholder="email">
+            <input class="px-5 py-2 border-2 rounded-xl border-zinc-300 bg-transparent"type="text" name="image url"  placeholder="image url">
             <input id="input1"class="rounded-lg bg-blue-500" value="create user" type="submit">
            
         </form>
