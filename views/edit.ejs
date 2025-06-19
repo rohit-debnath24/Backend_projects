@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <div class="w-full h-full bg-zinc-900 p-10 text-white">
+        <div class="flex">
+
+            <h1 class="text-3xl">Create User</h1>
+            <div class="nav ">
+                <a href="/read" id="nav-read"class="text-zinc-500 text-2xl">Update Users</a>
+            </div>
+        </div>
+          
+        <%editUser.forEach(function(user){%>
+        <form action="/update/<%=user._id%>" method="post">
+
+                <input class="p-5 m-5 border-2 rounded-xl border-zinc-300 bg-transparent"type="text" name="name"  value="<%=user.name%>">
+            <input class="px-5 py-2 border-2 rounded-xl border-zinc-300 bg-transparent"type="text" name="email"   value="<%=user.email%>">
+            <input class="px-5 py-2 border-2 rounded-xl border-zinc-300 bg-transparent"type="text" name="image"  value="<%=user.image%>">
+            <input id="input1"class="rounded-lg bg-yellow-500" value="update user" type="submit">
+</form>
+           <% })%>
+            
+           
+        
+
+
+    </div>
+</body>
+</html>
