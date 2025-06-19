@@ -21,26 +21,22 @@
 
     <div id="container" class=" w-full h-full bg-zinc-900 p-10 text-white">
         <div class="users flex flex-wrap gap-5">
-            <div id="box" class="user max-w-75 p-10 bg-zinc-800 rounded-lg">
-                <div class="w-full h-50 bg-zinc-500 rounded-lg"></div>
-                <h1 class="text-2xl tracking-tighter mt-3">Harsh Vandana Sharma</h1>
-                <h1 class="text-zinc-500">harsh@gmail.com</h1>
+           <%users.forEach(function(user){ %>
+             <div id="box" class="user max-w-75 p-10 bg-zinc-800 rounded-lg">
+                <div class="w-full h-50 bg-zinc-500 rounded-lg overflow-hidden">
+                    <img class=" w-full h-full object-cover"src="<%= user.image%>" alt="user image">
+                </div>
+                <h1 class="text-2xl tracking-tighter mt-3"><%= user.name %></h1>
+                <h1 class="text-zinc-500"><%= user.email %></h1>
                 <div class="flex gap-3">
                     <a href="" class="text-zinc-200">Edit user</a>
-                    <a href="" class="text-red-500">Delete user</a>
+                    <a  class="text-red-500" href="/delete/<%=user._id%>">Delete user</a>
 
                 </div>
             </div>
-            <div id="box" class="user max-w-72 p-10 bg-zinc-800 rounded-lg">
-                <div class="w-full h-50 bg-zinc-500 rounded-lg"></div>
-                <h1 class="text-2xl tracking-tighter mt-3">Harsh Vandana Sharma</h1>
-                <h1 class="text-zinc-500">harsh@gmail.com</h1>
-                <div class="flex gap-3">
-                    <a href="" class="text-zinc-200">Edit user</a>
-                    <a href="" class="text-red-500">Delete user</a>
 
-                </div>
-            </div>
+          <% }) %>
+          
           
             
          
